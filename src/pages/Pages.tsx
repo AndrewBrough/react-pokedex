@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MainLayout } from "../components/MainLayout/MainLayout";
 import { HomePage } from "./HomePage";
 

@@ -1,12 +1,11 @@
-/** @jsxImportSource @emotion/react */
-
-import { css } from "@emotion/react";
+import styled from "@emotion/styled";
 import { FC } from "react";
-import { PokedexHeader } from "@components/PokedexHeader";
+import { PokedexHeader } from "src/components/PokedexHeader";
+import { spacing } from "src/variables/spacing";
 
-const mainLayout = css`
+const Main = styled.main`
   font-size: 16px;
-  padding: 1rem;
+  padding: ${spacing.default};
   * {
     box-sizing: border-box;
     font-family: "Roboto Slab", serif;
@@ -15,10 +14,10 @@ const mainLayout = css`
 
 const MainLayout: FC = (props) => {
   return (
-    <main css={mainLayout} {...props}>
+    <Main {...props}>
       <PokedexHeader />
       {props.children}
-    </main>
+    </Main>
   );
 };
 
