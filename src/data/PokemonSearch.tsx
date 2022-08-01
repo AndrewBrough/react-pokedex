@@ -1,4 +1,4 @@
-import { createContext, FC, useState } from "react";
+import { createContext, FC, useContext, useState } from "react";
 
 interface PokemonSearch {
   query: string;
@@ -13,6 +13,8 @@ const pokemonSearchDefaults: PokemonSearch = {
 const PokemonSearchContext = createContext<PokemonSearch>(
   pokemonSearchDefaults
 );
+
+const usePokemonSearch = () => useContext(PokemonSearchContext);
 
 const PokemonSearchProvider: FC = ({ children }) => {
   const [query, setQuery] = useState(pokemonSearchDefaults.query);
@@ -29,4 +31,4 @@ const PokemonSearchProvider: FC = ({ children }) => {
   );
 };
 
-export { PokemonSearchProvider };
+export { PokemonSearchProvider, usePokemonSearch };

@@ -11,7 +11,7 @@ const I = styled.input<Props>((props) => ({
   textTransform: props.capitalize ? "capitalize" : "none",
 }));
 
-const Input: FC<Props> = ({ capitalize, ...props }) => {
+const Input: FC<Props> = (props) => {
   return <I {...props} />;
 };
 

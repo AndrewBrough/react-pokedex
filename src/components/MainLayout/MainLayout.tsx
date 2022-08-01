@@ -6,7 +6,8 @@ import { spacing } from "src/variables/spacing";
 const Main = styled.main`
   font-size: 16px;
   padding: ${spacing.default};
-  * {
+  *,
+  input {
     box-sizing: border-box;
     font-family: "Roboto Slab", serif;
   }
