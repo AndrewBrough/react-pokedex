@@ -1,7 +1,8 @@
 /** @jsxImportSource @emotion/react */
-import { PokedexHeader } from "@components/PokedexHeader";
+
 import { css } from "@emotion/react";
 import { FC } from "react";
+import { PokedexHeader } from "@components/PokedexHeader";
 
 const mainLayout = css`
   font-size: 16px;
