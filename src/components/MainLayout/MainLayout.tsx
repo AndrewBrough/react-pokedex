@@ -12,11 +12,11 @@ const Main = styled.main`
   }
 `;
 
-const MainLayout: FC = (props) => {
+const MainLayout: FC = ({ children }) => {
   return (
-    <Main {...props}>
+    <Main>
       <PokedexHeader />
-      {props.children}
+      {children}
     </Main>
   );
 };
