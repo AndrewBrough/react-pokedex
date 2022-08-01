@@ -4,19 +4,20 @@ import { usePokemonSearch } from "src/data/PokemonSearch";
 import { spacing } from "src/variables/spacing";
 import { Input } from "../base/Input";
 
-const SearchInput = styled(Input)`
-  flex: 1;
-  margin-right: ${spacing.default};
-`;
+const SearchInput = styled(Input)({
+  flex: 1,
+  marginRight: spacing.default,
+});
 
 const PokedexSearchInput: FC = () => {
-  const { setQuery } = usePokemonSearch();
+  const { query, setQuery } = usePokemonSearch();
 
   return (
     <SearchInput
       type="text"
       capitalize
-      onSubmit={(e) => setQuery(e.currentTarget.value)}
+      value={query}
+      onChange={(e) => setQuery(e.currentTarget.value)}
     />
   );
 };

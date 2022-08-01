@@ -1,4 +1,4 @@
-import { useQuery, gql, QueryHookOptions } from "@apollo/client";
+import { gql, LazyQueryHookOptions, useLazyQuery } from "@apollo/client";
 
 const POKEMON_SEARCH_QUERY = gql`
   query pokemonSearchQuery($input: String) {
@@ -22,9 +22,9 @@ interface PokemonSearchVariables {
 }
 
 const usePokemonSearchQuery = (
-  options?: QueryHookOptions<PokemonSearchData, PokemonSearchVariables>
+  options?: LazyQueryHookOptions<PokemonSearchData, PokemonSearchVariables>
 ) =>
-  useQuery<PokemonSearchData, PokemonSearchVariables>(
+  useLazyQuery<PokemonSearchData, PokemonSearchVariables>(
     POKEMON_SEARCH_QUERY,
     options
   );
