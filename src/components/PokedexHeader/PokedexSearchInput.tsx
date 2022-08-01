@@ -10,14 +10,13 @@ const SearchInput = styled(Input)`
 `;
 
 const PokedexSearchInput: FC = () => {
-  const { query, setQuery } = usePokemonSearch();
+  const { setQuery } = usePokemonSearch();
 
   return (
     <SearchInput
       type="text"
       capitalize
-      value={query}
-      onChange={(e) => setQuery(e.target.value)}
+      onSubmit={(e) => setQuery(e.currentTarget.value)}
     />
   );
 };

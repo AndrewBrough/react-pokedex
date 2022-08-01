@@ -27,6 +27,7 @@ const PokemonSearchProvider: FC = ({ children }) => {
     variables: {
       input: query,
     },
+    fetchPolicy: "cache-only",
   });
 
   const value: PokemonSearch = {
