@@ -1,9 +1,0 @@
-{
-  "pokemon_v2_pokemonspecies": [
-    {
-      "id": 25,
-      "name": "pikachu",
-      "__typename": "pokemon_v2_pokemonspecies"
-    }
-  ]
-}

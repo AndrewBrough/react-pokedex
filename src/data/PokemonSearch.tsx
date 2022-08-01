@@ -32,7 +32,6 @@ const PokemonSearchProvider: FC = ({ children }) => {
         variables: {
           input: debounceValue,
         },
-        fetchPolicy: "cache-first",
       }),
     200
   );
