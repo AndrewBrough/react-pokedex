@@ -1,4 +1,5 @@
 /** @jsxImportSource @emotion/react */
+import { PokedexHeader } from "@components/PokedexHeader";
 import { css } from "@emotion/react";
 import { FC } from "react";
 
@@ -14,6 +15,7 @@ const mainLayout = css`
 const MainLayout: FC = (props) => {
   return (
     <main css={mainLayout} {...props}>
+      <PokedexHeader />
       {props.children}
     </main>
   );
