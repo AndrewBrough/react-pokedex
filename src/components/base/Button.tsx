@@ -3,11 +3,11 @@ import { FC } from "react";
 import { spacing } from "src/variables/spacing";
 
 const B = styled.button`
-  padding: ${spacing.default};
+  padding: ${spacing.half};
 `;
 
 const Button: FC = (props) => {
-  return <B {...props}>${props.children}</B>;
+  return <B {...props}>{props.children}</B>;
 };
 
 export { Button };
